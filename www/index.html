@@ -1,0 +1,406 @@
+<html>
+<head>
+    <title>Evako Dine</title>
+    <meta name="viewport" content="width=device-width"> 
+     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="css/jquery.mobile.flatui.css" />
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/OnsenUI/OnsenUI-dist/1.3.9/css/onsenui.css'>
+    <link rel='stylesheet prefetch'  href='css/onsenui.css'>
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/OnsenUI/OnsenUI-dist/1.3.9/css/onsen-css-components.css'>
+    <link rel='stylesheet prefetch' src='css/onsen-css-components.css'>
+    <style type="text/css">
+        .ui-btn hover{background-color:#CE23B0;color:white;}
+        html {touch-action: manipulation;}
+    </style>
+    <style> body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width:100% !important;
+            overflow: hidden !important;
+            border:none !important;}
+    </style>
+</head>
+<body id="bodyid" onload="offline()">
+    <ons-sliding-menu  main-page="home.html" side="left" var="menu" type="push" max-slide-distance="1px" swipable="false">
+    </ons-sliding-menu>
+    <ons-template id=home.html>
+    <style>
+        .page__content {
+            overflow: hidden !important;
+        }
+
+        .page {
+            overflow: hidden !important;
+        }
+    </style>
+    <ons-modal var=modal><ons-icon icon=ion-load-c size=1000% spin=true></ons-icon></ons-modal>
+    <ons-page id=off ><ons-toolbar style="background-color:#d93029;height:4%;border:none !important;">
+        <div class=left style="width:20%;"></div><div class=center style="max-width:60%!important;">
+        <img src=images/logotopbar.png style="max-width:45%;margin-left:31%;margin-right:50%;margin-top:7px;"></div></ons-toolbar>
+        <ons-list style="height:100%"><img src=images/loginimg.jpg style="width:100%;height:30%"><div class=login>
+    <style>
+        .login {
+            width: 66% !important;
+        }
+         
+        .ui-input-text {
+            border-bottom: 1px solid #999 !important;
+        }
+    </style><div class=login-screen><div class=login-form><div class=control-group><div style=display:inline-flex;width:100%><img src=images/uname.png style="margin-left:-8%;height:3%;margin-right:10%;max-width:6%;margin-top:3%"> <input id=email style=width:100% class=login-field placeholder="username or Email"></div></div><div class=control-group><div style=display:inline-flex;width:100%><img src=images/upass.png style=margin-left:-8%;height:3%;margin-top:3%;margin-right:10%;max-width:6%> <input id=password style=width:100% class=login-field placeholder=password type=password></div></div><div style=display:inline-flex;width:60%><input id=rememberme style=transform:scale(2);-ms-transform:scale(2);-webkit-transform:scale(2);padding:10px;left:-16px type=checkbox ; value=Remember><p style=font-size:95%;color:#999;margin-top:5%;padding-left:19px>Remember me</p><button class="btn btn-block btn-large btn-primary" id=login123 onclick=doesConnectionExist() style=right:0!important>SIGN IN</button></div></div></div></div></ons-list></ons-page></ons-template>
+    <ons-template id=first.html>
+        <style>
+            .page__content {
+                overflow: hidden !important;
+               
+               
+            }
+
+            .page {
+                overflow: hidden !important;
+            }
+        </style>
+        <ons-navigator var=myNav>
+            <ons-modal var=modal>
+            <ons-icon icon=ion-load-c size=1000% spin=true></ons-icon>
+            </ons-modal>
+        <ons-page id=firstinit>
+            <div style="background-repeat:no-repeat;background-image:url(images/background.jpg);background-position:0 0;height:100%;background-size:100% 100%;position:fixed;top:0;left:0;right:0;bottom:0" id=menuback>
+    <style>
+        .ui-btn {
+             display: block;
+    height: 215px;
+    width: 222px !important;
+    border-radius: 50%;
+    border: 1px solid #ce23b0;
+    background: #ce23b0 !important;
+    opacity: 0.7;
+        }
+
+        .ui-btn-inner {
+              padding-top: 32%;
+    font-family: tayyablight;
+      font-size: 41px;
+    color: #fff;
+        }
+    </style>
+    <style>
+        a[href], button {
+            touch-action: manipulation;
+            -webkit-backface-visibility: hidden;
+        }
+    </style>
+            <div style="width:52%;position:absolute;bottom:21%"><button class="btn btn-block btn-large btn-primary" ontouchstart=menubutton() style="right:0!important">Menu</button></div>
+            <div style="width:100%;position:absolute;bottom:6%"><img id=logo src=images/logotopbar.png style="height:7%;float:right;max-width:24%;"></div>
+            <div style="width:100%;position:absolute;bottom:-1%"><p id=companytag style="margin-bottom:6%;float:right;max-width:48%;margin-right:4%;color:#fff;font-family:tayyabmedium"></div></div></ons-page>
+        </ons-navigator>
+    </ons-template>
+
+    <ons-template id=maincategory.html style="width:100%;">
+    <style>
+          .page__content { overflow: hidden !important;  overflow-y:scroll !important;background-image: url('images/background .jpg');}
+              
+
+
+    </style>
+    
+    <ons-page id=main1  style="overflow-x:hidden!important;">
+                                           <style>.page {
+                                                   overflow: hidden !important;}
+                                           </style>
+    <style>ons-toolbar {top: 16px !important;}
+         .page__background{background-image: url('images/background .jpg');
+                            background-repeat: no-repeat;
+                            background-size: 100% 100%;
+                            width: 100%;}
+        ons-toolbar ~ .page__content {
+        
+        top:0px !important;
+        
+        }
+                        
+    </style>
+        <ons-toolbar modifier="transparent" style="border:none !important;background-color:transparent !important;top: 16px !important;">
+   <div class="left" style="width:13%;font-family: tayyabmedium;">
+            <style> span 
+ { display:inline;
+            line-height: 25px !important;} 
+       
+       </style>
+       <span onclick="back();" class="toolbar-button--outline" style="margin-top: -5% !important;height:30px;margin-left: 0px;border-radius: 0px 10px 10px 0px;padding-top: 12px;padding-left:23px;border: none;background-color:#CE23B0;color: white;font-family: tayyabmedium;font-size: 21px;display: block;width: 75px;"> Back</span>
+</div>
+                                               <div class="center" style="background-color:transparent!important;width:60%!important;"></div>
+                                               <div class="right" id="kg" style="display: none !important;background-color:transparent!important;height: 88%;margin-top:-2%;">
+                                                   <span class="toolbar-button--outline" onclick="cart()" style="display:none;  padding-top:11px;padding-right:16%;margin-right:-6px;border:none;font-family:tayyabmedium;border-radius:10px 0px 0px 10px;display:inline;color:white;background-color:#CE23B0;">
+                                                       <img src="images/cartback.png" style="width:12%;height:26px;padding-top:11%;margin-bottom:-3%;margin-right:2%;font-family:tayyabmedium;" />Cart
+                                                   </span>
+                                                   <div id="totalordersinnot" class="notification menu-notification" style="position:inherit;margin-left:-9%;margin-top:1%;margin-right:3%;height:25px;padding-top:0%;background:#CE23B0;font-family:tayyabbold;border:1px solid  white; padding:3px 5px;width:10px;border-radius:7px;">
+                                                       0
+                                                   </div>
+                                               </div>
+                                           </ons-toolbar>
+    
+        <div style="padding-top:23%;background-image:url('images/background.jpg');background-repeat:no-repeat;background-size: 100% 100%;height:100%;width:100%;" id=maincat>
+        <p style="padding-top:0%;font-family:tayyabbold;padding-left:4%;margin-bottom:11%;margin-top:-53px;font-size:26px">Main Course</p>
+    <style>
+        .col {
+            text-align: center;
+        }
+    </style>
+        <div><div style="width:100%;color:#fff;padding-top:2%;max-width:100%;"   class=wrapper    id=main-categories></div></div></div>
+      
+       </ons-page>
+  
+    </ons-template>
+        <ons-template id="itemspage.html" style="width:100%;margin-left:1%;">
+            <style>
+                .page__content { overflow: hidden !important;  overflow-y:scroll !important;background-image: url('images/background .jpg');}
+                .page { overflow: hidden !important; }
+            </style>
+                <ons-page id="itemlis" style="overflow-x:hidden!important;">
+                    <style>
+                     ons-toolbar{ top: 16px !important; }
+                    .page__background{background-image: url('images/background .jpg') !important;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    width: 100%;}                           
+                    </style>
+                    <ons-toolbar modifier="transparent" style="border:none !important;background-color:transparent !important;top: 16px !important;">
+                        <div class="left" style="width:13%;font-family: tayyabmedium;">
+                            <span onclick="back();" class="toolbar-button--outline" style="margin-top: -5% !important;height:30px;margin-left: 0px;border-radius: 0px 10px 10px 0px;padding-top: 12px;padding-left:23px;border: none;background-color:#CE23B0;color: white;font-family: tayyabmedium;font-size: 21px;display: block;width: 75px;"> Back</span>
+      </div>
+                        <div class="center" style="background-color:transparent!important;width:60% !important;"></div>
+                        <div class="right" id="kg1" style="display: none !important;background-color:transparent!important;margin-top:-2%;">
+                            <span class="toolbar-button--outline" onclick="cart()" style="display:none;padding-top:11px;padding-right:16%;margin-right:-6px;border:none;font-family:tayyabmedium;border-radius:10px 0px 0px 10px;display:inline;color:white;background-color:#CE23B0;">
+                                <img src="images/cartback.png" style="width:12%;height:26px;padding-top:11%;margin-bottom:-3%;margin-right:2%;font-family:tayyabmedium;" />Cart
+                            </span>
+                            <div id="totalordersinnot" class="notification menu-notification" style="position:inherit;margin-left:-9%;margin-top:1%;margin-right:3%;height:25px;padding-top:0%;background:#CE23B0;font-family:tayyabbold;border:1px solid  white; padding:3px 5px;width:10px;border-radius:7px;">
+                                0
+                            </div>
+                        </div>
+                    </ons-toolbar>
+                               <div id="maincat" style="padding-top:23%;background-image:url('images/background.jpg');background-repeat:no-repeat;background-size: 100% 100%;height:100%;width:100%;">
+
+                        <p id="detitemslist" style="padding-top:0%;font-family:tayyabbold;padding-left: 4%;margin-bottom:12%; margin-top: -10%;font-size: 26px;">Menu</p>
+                        <p style="font-family:tayyabregular;padding-left:4%;margin-top:-7%;margin-top:-12%;margin-bottom:12%;font-size:22px;">Revolutionary Menu</p>
+                        <style>
+                            .col{
+                          text-align: center;
+                            }
+                        </style>
+                        <div>
+                            <div id="itemslistt" class="wrapper" style="width:100%;color:white;padding-top:2%;max-width:100%;">
+                            </div>
+
+                        </div>
+                        </div>
+                </ons-page>
+        </ons-template>
+    <ons-template id="singledetail.html" style="width:100%;margin-left:1%;">
+        <style>
+            .page__content {overflow: hidden !important;
+                          /*overflow-y:scroll !important;*/
+            }
+            .page { overflow: hidden !important;}
+        </style>
+        <ons-page id="singlo">
+            <style>
+        ons-toolbar{
+                    top: 16px !important;
+                }
+         .page__background{
+                    background:white !important;
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    width: 100%;}  
+
+              
+            </style>
+            <ons-toolbar modifier="transparent" style="border:none !important;background-color:transparent !important;top: 10px !important;">
+                <div class="left" style="width:13%;font-family: tayyabmedium;" >
+                    <span onclick="back();" class="toolbar-button--outline" style="margin-top: -5% !important;height:30px;margin-left: 0px;border-radius: 0px 10px 10px 0px;padding-top: 12px;padding-left:23px;border: none;background-color:#CE23B0;color: white;font-family: tayyabmedium;font-size: 21px;display: block;width: 75px;"> Back</span>
+
+                </div>
+                <div class="center" style="background-color:transparent!important;width:60% !important;"></div>
+                <div class="right" id="kg2" style="display:none !important;background-color:transparent!important;height: 88%;margin-top:-2%;">
+                    <span class="toolbar-button--outline" onclick="cart()" style="display:none;padding-top:11px;padding-right:16%;margin-right:-6px;border:none;font-family:tayyabmedium;border-radius:10px 0px 0px 10px;display:inline;color:white;background-color:#CE23B0;">
+                        <img src="images/cartback.png" style="width:12%;height:26px;padding-top:11%;margin-bottom:-3%;margin-right:2%;font-family:tayyabmedium;" />Cart
+                    </span>
+                    <div id="totalordersinnot" class="notification menu-notification" style="position:inherit;margin-left:-9%;margin-top:1%;margin-right:3%;height:25px;padding-top:0%;background:#CE23B0;font-family:tayyabbold;border:1px solid  white; padding:3px 5px;width:10px;border-radius:7px;">
+                        0
+                    </div>
+                </div>
+            </ons-toolbar>
+
+              <ons-gesture-detector>
+                <div id="ajkl" style="height:100%;">
+                    <ons-carousel fullscreen swipeable auto-scroll id="carousel" style="height: 54%;">
+                        <ons-carousel-item style="background-color: #085078;">
+
+                        </ons-carousel-item>
+                        <ons-carousel-item style="background-color: #373B44;">
+
+                        </ons-carousel-item>
+                        <ons-carousel-item style="background-color: #D38312;">
+                        </ons-carousel-item>
+                        <ons-carousel-cover>
+                            <div class="cover-label" ></div>
+                            <div class="cover-label1">
+                                <span class="indicators"> 1 </span>
+                                <span class="indicators"> 2 </span>
+                                <span class="indicators"> 3 </span>
+                            </div>
+                        </ons-carousel-cover>
+                    </ons-carousel>
+                    <div style="position:absolute;bottom: 31%;width: 100%;padding-left:28px;">
+                        <ons-row>
+                            <div id="slideitemname" style="padding-left:2%;margin-top:1%;font-size: 24px;font-family:tayyabbold;"></div>
+                        </ons-row>
+                        <ons-row >
+                            <ons-col></ons-col>
+                            <ons-col></ons-col>
+                            <ons-col style="margin-top:-3%;">
+                                <style>
+                                    .ui-input-text 
+                                            {width: 15% !important;
+                                        -webkit-appearance: textfield;
+                                        -webkit-rtl-ordering: logical;
+                                                 }
+                                    .ui-body-c.ui-input-text 
+                                       { 
+                                        margin-top: -1%;
+
+
+                                    }
+                                </style>
+                                <div id="product_1" class="product" style="display:none;">
+                                    <div class="remove" onclick="min()">-</div>
+                                    <input type="text" id="product_qty_1" value="1" readonly="readonly">
+                                    <div class="add" onclick="ado()">+</div>
+                                </div><span  id="adbtn" onclick="add(itemnamet, sellpricet);" class="toolbar-button--outline" style="display:none !important;margin-top:7%;border:none;background-color: #CE23B0;background-color:#CE23B0;color:white;font-family: tayyabmedium;font-size:21px;padding:4% 14% 4% 9%;border-radius:6px;font-family:tayyabmedium;font-size:21px;width:30%;">+ Add</span>
+                            </ons-col>
+                        </ons-row>
+                        <ons-row >
+                            <ons-col><p id="price" style="float:left;padding-left:7%;margin-top:1%;font-size: 20px;font-family:tayyabbold;"></p></ons-col>
+                            <ons-col style="display:none !important;margin-top:-13%;font-family:tayyabmedium;font-size:23px;"><p style="display:none !important;margin-top:-3%;font-family:tayyabbold;font-size: 23px;">20 Min</p><p id="ingredients" style="display:none !important;margin-top:-3%;font-family:tayyabbold;font-size: 23px;padding-left:13%;">Ingredients</p> <!--<p id="tagss" style="padding-top: 18%;margin-top: -3%;font-family:tayyabbold;font-size: 23px;padding-left: 13%;"></p>--></ons-col>
+                        
+                            <ons-col></ons-col>
+                        </ons-row>
+                        <ons-row>
+                            <p id="discription" style="margin-left:19px;margin-top:-10px;">
+
+                            </p>
+                        </ons-row>
+                    </div>
+
+
+
+                   
+
+                    <ons-carousel class="scroller" id="carousel1" swipeable auto-scroll item-width="25%"   style="overflow-y: scroll; -webkit-overflow-scrolling:touch;overflow-x: scroll;overflow-y: hidden;top:79%;margin-top:1px;height: 21%;position:absolute !important;"  auto-scroll-ratio="0.2">
+                        <ons-carousel-cover>
+
+                        </ons-carousel-cover>
+                    </ons-carousel>
+                     </div>
+
+            </ons-gesture-detector>
+            <script type="text/javascript">
+                    document.addEventListener('swipeleft', function (event) {
+                        if (event.target.matches('#ajkl')) {
+                            ongesturel();
+                        }
+                    });
+                    document.addEventListener('swiperight', function (event) {
+                        if (event.target.matches('#ajkl')) {
+                            ongesturer();
+                        }
+                    });
+            </script>
+        </ons-page>
+        
+                
+      
+
+    </ons-template>
+    <style>
+        .page__background {
+            background-image: url('images/background .jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+        }
+    </style>
+
+    <ons-template id=cartpage.html style="width:100%;margin-left:1%">
+        <style>
+            .page__content {
+                overflow: hidden !important;
+                top: 0px !important;
+            }
+
+            .page {
+                overflow: hidden !important;
+            }
+        </style>
+
+
+    
+    <ons-page id="carts">
+   
+         
+        <ons-toolbar modifier="transparent"  style="border:none!important;background-color:transparent!important;top:16px!important">
+            <div class="left" style="width:13%;font-family: tayyabmedium;">
+                <span onclick="back();" class="toolbar-button--outline" style="margin-top: -5% !important;height:30px;margin-left: 0px;border-radius: 0px 10px 10px 0px;padding-top: 12px;padding-left:23px;border: none;background-color:#CE23B0;color: white;font-family: tayyabmedium;font-size: 21px;display: block;width: 75px;"> Back</span>
+
+            </div>
+            <div style="background-color:transparent!important" class=center></div><div style="display: none !important;background-color:transparent!important;" class=right></div>
+        </ons-toolbar>
+        
+        <div style="text-align:center;font-family:Ubuntu" id=acb>
+        <div style="background-color:#d93029;color:#fff;padding-top:2%;margin-top:29%" class=wrapper><div style="height:5%;background-color:#d93029" class=box>#</div>
+            <div style=text-align:left;font-size:103%;height:5%;background-color:#d93029 class=box>Description</div><div style=height:5%;background-color:#d93029 class=box>Qty</div><div style=height:5%;background-color:#d93029 class=box>Amount</div></div>
+            <div id=orderinfo></div><div style=color:#fff;padding-top:2% class=wrapper><div style=height:5%;background-color:#d93029 class=box></div><div style=text-align:left;font-size:103%;height:5%;background-color:#d93029 class=box></div><div style=height:5%;background-color:#d93029 class=box id=qtyintotal></div><div style="height:5%;background-color:#d93029" class=box id=totalamounte></div></div>
+      <div>
+         
+      </div>
+        
+          </div>
+        </ons-page></ons-template>
+      <script type="=text/javascript">
+            $('#back').hide();
+              $('.ui-body').hide();
+        </script>
+        <script src='css/angular.min.js'></script>
+        <script src="css/jquery-1.10.1.min.js"></script>
+        <script src="scripts/ng-cordova.min.js"></script>
+        <script src="css/jquery.mobile-1.3.1.min.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script src='css/onsenui.min.js'></script>
+        <script src='https://cdn.rawgit.com/OnsenUI/OnsenUI-dist/1.3.9/js/onsenui.min.js'></script>
+        <script type="text/javascript">
+            ons.bootstrap();
+            $(document).on("pageinit", "#main1", function (event) {
+                onloadofmaincate();
+            });
+            $(document).on("pageinit", "#itemlis", function (event) {
+                itemlistload();
+            });
+            $(document).on("pageinit", "#singlo", function (event) {
+                onloadsinglledet();
+            });
+            $(document).on("pageinit", "#carts", function (event) {
+                cartloadf();
+            });
+
+            $(document).on("pageinit", "#firstinit", function (event) {
+                firstet();
+            });
+            $(document).on("pageinit", "#off", function (event) {
+                offline();
+            });</script>
+
+</body>
+</html>
